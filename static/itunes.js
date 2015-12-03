@@ -38,7 +38,9 @@ function initApp() {
       itunes.query(search.val())
          .done(searchDone)
          .fail(function(data) {
-            console.log('F', data);
+            console.error('Error response', data);
+            title.text('There was an error with the request');
+            rawData.text(JSON.stringify(data));
          });
    });
 }
