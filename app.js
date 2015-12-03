@@ -1,6 +1,7 @@
 var express = require('express'),
    app = express(),
    request = require('request'),
+   ip = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1',
    port = process.env.OPENSHIFT_NODEJS_PORT || 8080;
 
 //app.use(function(req, res, next) {
@@ -29,5 +30,5 @@ app.get('/api/:id', function(req, res) {
 });
 app.use(express.static('static'));
 
-app.listen(port);
-console.log('Listening on port ' + port);
+app.listen(port, ip);
+console.log('Listening on ' + ip + ':' + port);
