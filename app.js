@@ -1,6 +1,7 @@
 var express = require('express'),
    app = express(),
-   request = require('request');
+   request = require('request'),
+   port = process.env.OPENSHIFT_NODEJS_PORT || 8080;
 
 //app.use(function(req, res, next) {
 //     res.header("Access-Control-Allow-Origin", "*");
@@ -28,4 +29,5 @@ app.get('/api/:id', function(req, res) {
 });
 app.use(express.static('static'));
 
-app.listen(process.env.OPENSHIFT_NODEJS_PORT || 8080);
+app.listen(port);
+console.log('Listening on port ' + port);
