@@ -16,8 +16,8 @@ function initApp() {
       console.log(data);
       rawData.text(JSON.stringify(data));
 
-      if(data.resultCount < 1) return userRating.text('No results');
-      if(data.resultCount > 1) return userRating.text('Mulitple results returned');
+      if(data.resultCount < 1) return title.text('No results');
+      if(data.resultCount > 1) return title.text('Mulitple results returned');
 
       title.text(data.results[0].trackName);
       userRating.text(data.results[0].averageUserRating);
