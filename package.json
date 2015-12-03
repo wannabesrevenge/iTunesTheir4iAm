@@ -1,0 +1,25 @@
+{
+  "name": "itunestheir4iam",
+  "version": "1.0.0",
+  "description": "iTunes API Wrapper Web App",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.13.3",
+    "request": "^2.67.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wannabesrevenge/iTunesTheir4iAm.git"
+  },
+  "author": "Brian Schultz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wannabesrevenge/iTunesTheir4iAm/issues"
+  },
+  "homepage": "https://github.com/wannabesrevenge/iTunesTheir4iAm#readme"
+}
